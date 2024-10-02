@@ -16,7 +16,8 @@
 }
 
 .carousel.pointer-event {
-  touch-action: pan-y;
+  // Allow both vertical and horizontal scrolling on mobile
+  touch-action: auto;
 }
 
 .carousel-inner {
@@ -35,6 +36,7 @@
   backface-visibility: hidden;
   @include transition($carousel-transition);
 }
+
 
 .carousel-item.active,
 .carousel-item-next,
