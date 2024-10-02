@@ -58,106 +58,31 @@
 	  </nav>
     <!-- END nav -->
     
- <!-- HTML remains the same -->
-<section class="home-slider owl-carousel">
-    <div class="slider-item" style="background-image:url(images/bg_1.png);">
-        <div class="overlay"></div>
+ <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image:url(images/bg_1.png);">
+      	<div class="overlay"></div>
         <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-                <div class="col-md-8 text-center ftco-animate">
-                    <h1 class="mb-4">Domina el Coreano y <span>Conecta mas alla de las Fronteras</span></h1>
-                </div>
-            </div>
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-8 text-center ftco-animate">
+            <h1 class="mb-4">Domina el Coreano y<span>Conecta mas alla de las Fronteras</span></h1>
+            
+          </div>
         </div>
-    </div>
+        </div>
+      </div>
 
-    <div class="slider-item" style="background-image:url(images/bg_2.png);">
-        <div class="overlay"></div>
+      <div class="slider-item" style="background-image:url(images/bg_2.png);">
+      	<div class="overlay"></div>
         <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-                <div class="col-md-8 text-center ftco-animate">
-                    <h1 class="mb-4">한국어를 마스터하고, <span>경계를 넘어 소통하세요.</span></h1>
-                </div>
-            </div>
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-8 text-center ftco-animate">
+            <h1 class="mb-4">한국어를 마스터하고,<span>경계를 넘어 소통하세요.</span></h1>
+            
+          </div>
         </div>
-    </div>
-</section>
-
-<!-- Add this style to fix the scrolling issue -->
-<style>
-    /* Adjust the height of the carousel */
-    .home-slider {
-        position: relative;
-        height: auto; /* Let the content determine the height */
-        overflow: visible; /* Ensure that overflow is allowed */
-    }
-
-    /* Make sure slider items do not cover entire screen */
-    .slider-item {
-        min-height: 60vh; /* Change this if needed */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-size: cover;
-        background-position: center;
-    }
-
-    /* Add mobile-specific settings */
-    @media (max-width: 768px) {
-        .home-slider {
-            height: auto; /* Ensure carousel fits within view */
-        }
-        .slider-item {
-            min-height: 50vh; /* Shrink height for better mobile UX */
-        }
-    }
-
-    /* Allow touch scrolling */
-    body, html {
-        overflow-y: auto;
-        touch-action: manipulation; /* Allow touch gestures like scrolling */
-    }
-
-    /* Fix potential z-index issue */
-    .overlay {
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-    }
-</style>
-
-<!-- Owl Carousel Initialization (if required) -->
-<script>
-    $(document).ready(function(){
-        $('.owl-carousel').owlCarousel({
-            items: 1,
-            loop: true,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            nav: false,
-            dots: true,
-            touchDrag: true, /* Ensure touch drag is enabled */
-            mouseDrag: true, /* Allow mouse dragging */
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false
-                },
-                600: {
-                    items: 1,
-                    nav: false
-                },
-                1000: {
-                    items: 1,
-                    nav: false
-                }
-            }
-        });
-    });
-</script>
-
-
+        </div>
+      </div>
+    </section>
 
     <section class="ftco-services ftco-no-pb">
 			<div class="container-wrap">
