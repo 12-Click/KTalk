@@ -22,125 +22,67 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <script src="https://www.paypal.com/sdk/js?client-id=Ac9lTRJ76nhLqh_KMBeZrgJd3T-AWntAHLFj6PekQb2HuXZyqj2jUwpw23O_LSwSQ-ATgXFBWFCQbfsv"></script>
-
-    <link rel="shortcut icon" href="images/My Logo.jpeg">
+	<script src="https://www.paypal.com/sdk/js?client-id=Ac9lTRJ76nhLqh_KMBeZrgJd3T-AWntAHLFj6PekQb2HuXZyqj2jUwpw23O_LSwSQ-ATgXFBWFCQbfsv"></script>
   </head>
+<!-- Favicon-->
+<link rel="shortcut icon" href="images/My Logo.jpeg">
 
   <body>
+	  
+					    </div>
+					
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
-      <div class="container d-flex align-items-center">
-        <img src="images/Little Logo.png" alt=""><a class="navbar-brand" href="index.html">K-Talk Academy</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="oi oi-menu"></span> Menu
-        </button>
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="index.html" class="nav-link pl-0">Inicio</a></li>
-            <li class="nav-item"><a href="#coreano" class="nav-link">Clases de Coreano</a></li>
-            <li class="nav-item"><a href="#ingles" class="nav-link">Clases de Ingles</a></li>
-            <li class="nav-item"><a href="#inscribete" class="nav-link">Inscripción</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
+	    <div class="container d-flex align-items-center">
+	    	<img src="images/Little Logo.png" alt=""><a class="navbar-brand" href="index.html">K-Talk Academy</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item active"><a href="index.html" class="nav-link pl-0">Inicio</a></li>
+	        	
+	        	<li class="nav-item"><a href="#coreano" class="nav-link">Clases de Coreano</a></li>
+	        	<li class="nav-item"><a href="#ingles" class="nav-link">Clases de Ingles</a></li>
+	        	<li class="nav-item"><a href="#inscribete" class="nav-link">Inscripción</a></li>
+	        	
+	          
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
     <section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image:url(images/bg_1.png);">
-        <div class="overlay"></div>
+      	<div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-            <div class="col-md-8 text-center ftco-animate">
-              <h1 class="mb-4">Domina el Coreano y<span>Conecta mas alla de las Fronteras</span></h1>
-            </div>
+          <div class="col-md-8 text-center ftco-animate">
+            <h1 class="mb-4">Domina el Coreano y<span>Conecta mas alla de las Fronteras</span></h1>
+            
           </div>
+        </div>
         </div>
       </div>
 
       <div class="slider-item" style="background-image:url(images/bg_2.png);">
-        <div class="overlay"></div>
+      	<div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-            <div class="col-md-8 text-center ftco-animate">
-              <h1 class="mb-4">한국어를 마스터하고,<span>경계를 넘어 소통하세요.</span></h1>
-            </div>
+          <div class="col-md-8 text-center ftco-animate">
+            <h1 class="mb-4">한국어를 마스터하고,<span>경계를 넘어 소통하세요.</span></h1>
+            
           </div>
+        </div>
         </div>
       </div>
     </section>
-
-    <!-- Rest of your content -->
-  </body>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-
-  <script>
-    // Initialize Owl Carousel with adjusted touch behavior
-    $('.owl-carousel').owlCarousel({
-        items: 1,
-        loop: true,
-        autoplay: true,
-        autoplayHoverPause: true,
-        smartSpeed: 1000,
-        nav: false,
-        dots: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            }
-        },
-        // Prevent vertical scroll capture on mobile
-        touchDrag: true,
-        pullDrag: true,
-        mouseDrag: true,
-        onInitialized: function() {
-            var dragging = false;
-            var startY = 0;
-            var threshold = 30; // Threshold for Y-axis movement
-
-            $('.owl-carousel .owl-stage').on('touchstart', function(e) {
-                startY = e.originalEvent.touches[0].clientY;
-                dragging = false;
-            });
-
-            $('.owl-carousel .owl-stage').on('touchmove', function(e) {
-                var currentY = e.originalEvent.touches[0].clientY;
-                var diffY = Math.abs(currentY - startY);
-
-                if (diffY > threshold) {
-                    dragging = true;
-                    e.stopImmediatePropagation(); // Prevent OwlCarousel swipe capture
-                }
-            });
-
-            $('.owl-carousel .owl-stage').on('touchend', function() {
-                dragging = false;
-            });
-        }
-    });
-  </script>
-
-  <style>
-    @media (max-width: 768px) {
-      .slider-item {
-        height: 100vh;
-        background-attachment: scroll;
-        touch-action: pan-y;
-      }
-
-      body {
-        overflow-y: scroll;
-      }
-    }
-  </style>
 
 
     <section class="ftco-services ftco-no-pb">
