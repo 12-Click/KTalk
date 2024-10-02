@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-	<script src="https://www.paypal.com/sdk/js?client-id=Ac9lTRJ76nhLqh_KMBeZrgJd3T-AWntAHLFj6PekQb2HuXZyqj2jUwpw23O_LSwSQ-ATgXFBWFCQbfsv"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=Ac9lTRJ76nhLqh_KMBeZrgJd3T-AWntAHLFj6PekQb2HuXZyqj2jUwpw23O_LSwSQ-ATgXFBWFCQbfsv"></script>
   </head>
 <!-- Favicon-->
 <link rel="shortcut icon" href="images/My Logo.jpeg">
@@ -58,7 +58,7 @@
 	  </nav>
     <!-- END nav -->
     
- <section class="home-slider owl-carousel">
+    <section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image:url(images/bg_1.png);">
       	<div class="overlay"></div>
         <div class="container">
@@ -83,51 +83,6 @@
         </div>
       </div>
     </section>
-
-	  <style>
-  .owl-carousel {
-    touch-action: pan-y; /* Allow vertical scrolling */
-  }
-</style>
-
-	<script>
-  $(document).ready(function() {
-    var startY, startX, diffX, diffY;
-
-    // Initialize Owl Carousel
-    $('.owl-carousel').owlCarousel({
-      items: 1,
-      loop: true,
-      margin: 0,
-      nav: true,
-      dots: false,
-      autoplay: true,
-      autoplayTimeout: 5000,
-      autoplayHoverPause: true,
-      smartSpeed: 800,
-      touchDrag: true,
-      mouseDrag: true,
-      pullDrag: true
-    });
-
-    // Custom script to allow vertical scrolling on mobile
-		var startY, startX, diffX, diffY;
-
-		$('.home-slider').on('touchstart', function(e) {
-		  startY = e.originalEvent.touches[0].clientY;
-		  startX = e.originalEvent.touches[0].clientX;
-		});
-	
-		$('.home-slider').on('touchmove', function(e) {
-		  diffY = startY - e.originalEvent.touches[0].clientY;
-		  diffX = startX - e.originalEvent.touches[0].clientX;
-	
-		  // If the swipe is more vertical than horizontal, allow scrolling
-		  if (Math.abs(diffY) > Math.abs(diffX)) {
-			e.stopPropagation();  // Let the vertical scroll work
-		  }
-		});
-</script>
 
 
     <section class="ftco-services ftco-no-pb">
