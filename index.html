@@ -110,22 +110,23 @@
       pullDrag: true
     });
 
-    // Custom code to detect vertical swipes and prevent Owl from interfering
-    $('.owl-carousel').on('touchstart', function(e) {
-      startY = e.originalEvent.touches[0].clientY;
-      startX = e.originalEvent.touches[0].clientX;
-    });
+    // Custom script to allow vertical scrolling on mobile
+		var startY, startX, diffX, diffY;
 
-    $('.owl-carousel').on('touchmove', function(e) {
-      diffY = startY - e.originalEvent.touches[0].clientY;
-      diffX = startX - e.originalEvent.touches[0].clientX;
-
-      // If the swipe is more vertical than horizontal, allow page scroll
-      if (Math.abs(diffY) > Math.abs(diffX)) {
-        e.stopPropagation(); // Allow vertical scrolling
-      }
-    });
-  });
+		$('.home-slider').on('touchstart', function(e) {
+		  startY = e.originalEvent.touches[0].clientY;
+		  startX = e.originalEvent.touches[0].clientX;
+		});
+	
+		$('.home-slider').on('touchmove', function(e) {
+		  diffY = startY - e.originalEvent.touches[0].clientY;
+		  diffX = startX - e.originalEvent.touches[0].clientX;
+	
+		  // If the swipe is more vertical than horizontal, allow scrolling
+		  if (Math.abs(diffY) > Math.abs(diffX)) {
+			e.stopPropagation();  // Let the vertical scroll work
+		  }
+		});
 </script>
 
 
