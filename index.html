@@ -22,6 +22,38 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+	  <style>
+      /* Fix for owl-carousel height and overflow */
+      .owl-carousel .slider-item {
+          height: 100vh;
+          overflow: hidden;
+      }
+
+      body, html {
+          overflow-x: hidden;
+          height: 100%;
+      }
+
+      .slider-item {
+          background-size: cover;
+          background-position: center center;
+          min-height: 100vh;
+      }
+
+      /* Ensure scrolling in mobile */
+      .owl-carousel {
+          position: relative;
+          z-index: 1;
+      }
+
+      .owl-carousel .owl-stage-outer {
+          overflow: hidden;
+      }
+
+      .owl-carousel {
+          touch-action: pan-y;
+      }
+    </style>
 	<script src="https://www.paypal.com/sdk/js?client-id=Ac9lTRJ76nhLqh_KMBeZrgJd3T-AWntAHLFj6PekQb2HuXZyqj2jUwpw23O_LSwSQ-ATgXFBWFCQbfsv"></script>
   </head>
 <!-- Favicon-->
@@ -58,31 +90,46 @@
 	  </nav>
     <!-- END nav -->
     
- <section class="home-slider owl-carousel">
+   <section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image:url(images/bg_1.png);">
-      	<div class="overlay"></div>
+        <div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-          <div class="col-md-8 text-center ftco-animate">
-            <h1 class="mb-4">Domina el Coreano y<span>Conecta mas alla de las Fronteras</span></h1>
-            
+            <div class="col-md-8 text-center ftco-animate">
+              <h1 class="mb-4">Domina el Coreano y <span>Conecta mas alla de las Fronteras</span></h1>
+            </div>
           </div>
-        </div>
         </div>
       </div>
 
       <div class="slider-item" style="background-image:url(images/bg_2.png);">
-      	<div class="overlay"></div>
+        <div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-          <div class="col-md-8 text-center ftco-animate">
-            <h1 class="mb-4">한국어를 마스터하고,<span>경계를 넘어 소통하세요.</span></h1>
-            
+            <div class="col-md-8 text-center ftco-animate">
+              <h1 class="mb-4">한국어를 마스터하고, <span>경계를 넘어 소통하세요.</span></h1>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </section>
+
+    <!-- Owl Carousel JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+      $('.owl-carousel').owlCarousel({
+          items: 1,
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 5000,
+          autoplayHoverPause: true,
+          nav: false,
+          dots: true,
+          touchDrag: true,
+          mouseDrag: true
+      });
+    </script>
 
     <section class="ftco-services ftco-no-pb">
 			<div class="container-wrap">
