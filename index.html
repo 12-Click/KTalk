@@ -58,31 +58,59 @@
 	  </nav>
     <!-- END nav -->
     
-    <section class="home-slider owl-carousel">
-      <div class="slider-item" style="background-image:url(images/bg_1.png);">
-      	<div class="overlay"></div>
+  <section class="home-slider owl-carousel">
+    <div class="slider-item" style="background-image:url(images/bg_1.png);">
+        <div class="overlay"></div>
         <div class="container">
-          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-          <div class="col-md-8 text-center ftco-animate">
-            <h1 class="mb-4">Domina el Coreano y<span>Conecta mas alla de las Fronteras</span></h1>
-            
-          </div>
+            <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+                <div class="col-md-8 text-center ftco-animate">
+                    <h1 class="mb-4">Domina el Coreano y <span>Conecta mas alla de las Fronteras</span></h1>
+                </div>
+            </div>
         </div>
-        </div>
-      </div>
+    </div>
 
-      <div class="slider-item" style="background-image:url(images/bg_2.png);">
-      	<div class="overlay"></div>
+    <div class="slider-item" style="background-image:url(images/bg_2.png);">
+        <div class="overlay"></div>
         <div class="container">
-          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-          <div class="col-md-8 text-center ftco-animate">
-            <h1 class="mb-4">한국어를 마스터하고,<span>경계를 넘어 소통하세요.</span></h1>
-            
-          </div>
+            <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+                <div class="col-md-8 text-center ftco-animate">
+                    <h1 class="mb-4">한국어를 마스터하고, <span>경계를 넘어 소통하세요.</span></h1>
+                </div>
+            </div>
         </div>
-        </div>
-      </div>
-    </section>
+    </div>
+</section>
+
+<!-- Add this style to fix the scrolling issue -->
+<style>
+    /* Ensure the slider section doesn't take the entire height */
+    .home-slider {
+        position: relative;
+        min-height: 50vh; /* Adjust this value as needed */
+        overflow: hidden;
+    }
+
+    /* Ensure the .slider-item doesn't take full height */
+    .slider-item {
+        min-height: 50vh; /* Adjust this as necessary for balance */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    /* For smaller screens, reduce the height of the slider further */
+    @media (max-width: 768px) {
+        .home-slider {
+            min-height: 40vh; /* Decrease height on mobile */
+        }
+        .slider-item {
+            min-height: 40vh;
+        }
+    }
+</style>
 
 
     <section class="ftco-services ftco-no-pb">
@@ -152,34 +180,6 @@
 					<p>쉽고 재미있는 한국어: 모험에 함께하세요!</p>
 				  </div>
 				</div>
-				  <style>
-    /* Ensure the slider section doesn't take the entire height */
-    .home-slider {
-        position: relative;
-        min-height: 50vh; /* Adjust this value as needed */
-        overflow: hidden;
-    }
-
-    /* Ensure the .slider-item doesn't take full height */
-    .slider-item {
-        min-height: 50vh; /* Adjust this as necessary for balance */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-size: cover;
-        background-position: center center;
-    }
-
-    /* For smaller screens, reduce the height of the slider further */
-    @media (max-width: 768px) {
-        .home-slider {
-            min-height: 40vh; /* Decrease height on mobile */
-        }
-        .slider-item {
-            min-height: 40vh;
-        }
-    }
-</style>
 		  
 				<!-- Image Section -->
 				<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate d-flex align-items-center">
