@@ -90,8 +90,11 @@
   }
 </style>
 
-	  <script>
+	<script>
   $(document).ready(function() {
+    var startY, startX, diffX, diffY;
+
+    // Initialize Owl Carousel
     $('.owl-carousel').owlCarousel({
       items: 1,
       loop: true,
@@ -105,6 +108,22 @@
       touchDrag: true,
       mouseDrag: true,
       pullDrag: true
+    });
+
+    // Custom code to detect vertical swipes and prevent Owl from interfering
+    $('.owl-carousel').on('touchstart', function(e) {
+      startY = e.originalEvent.touches[0].clientY;
+      startX = e.originalEvent.touches[0].clientX;
+    });
+
+    $('.owl-carousel').on('touchmove', function(e) {
+      diffY = startY - e.originalEvent.touches[0].clientY;
+      diffX = startX - e.originalEvent.touches[0].clientX;
+
+      // If the swipe is more vertical than horizontal, allow page scroll
+      if (Math.abs(diffY) > Math.abs(diffX)) {
+        e.stopPropagation(); // Allow vertical scrolling
+      }
     });
   });
 </script>
