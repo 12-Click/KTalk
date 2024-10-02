@@ -23,10 +23,8 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- PayPal SDK -->
-	<script src="https://www.paypal.com/sdk/js?client-id=Ac9lTRJ76nhLqh_KMBeZrgJd3T-AWntAHLFj6PekQb2HuXZyqj2jUwpw23O_LSwSQ-ATgXFBWFCQbfsv"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=Ac9lTRJ76nhLqh_KMBeZrgJd3T-AWntAHLFj6PekQb2HuXZyqj2jUwpw23O_LSwSQ-ATgXFBWFCQbfsv"></script>
 
-    <!-- Favicon -->
     <link rel="shortcut icon" href="images/My Logo.jpeg">
   </head>
 
@@ -47,7 +45,7 @@
         </div>
       </div>
     </nav>
-    
+
     <section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image:url(images/bg_1.png);">
         <div class="overlay"></div>
@@ -74,20 +72,75 @@
 
     <!-- Rest of your content -->
   </body>
-</html>
 
-<style>
-  /* Ensure scrolling works on mobile */
-  @media (max-width: 768px) {
-    .slider-item {
-      height: 100vh;
-      background-attachment: scroll;
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+
+  <script>
+    // Initialize Owl Carousel with adjusted touch behavior
+    $('.owl-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        smartSpeed: 1000,
+        nav: false,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        },
+        // Prevent vertical scroll capture on mobile
+        touchDrag: true,
+        pullDrag: true,
+        mouseDrag: true,
+        onInitialized: function() {
+            var dragging = false;
+            var startY = 0;
+            var threshold = 30; // Threshold for Y-axis movement
+
+            $('.owl-carousel .owl-stage').on('touchstart', function(e) {
+                startY = e.originalEvent.touches[0].clientY;
+                dragging = false;
+            });
+
+            $('.owl-carousel .owl-stage').on('touchmove', function(e) {
+                var currentY = e.originalEvent.touches[0].clientY;
+                var diffY = Math.abs(currentY - startY);
+
+                if (diffY > threshold) {
+                    dragging = true;
+                    e.stopImmediatePropagation(); // Prevent OwlCarousel swipe capture
+                }
+            });
+
+            $('.owl-carousel .owl-stage').on('touchend', function() {
+                dragging = false;
+            });
+        }
+    });
+  </script>
+
+  <style>
+    @media (max-width: 768px) {
+      .slider-item {
+        height: 100vh;
+        background-attachment: scroll;
+        touch-action: pan-y;
+      }
+
+      body {
+        overflow-y: scroll;
+      }
     }
-    body {
-      overflow-y: scroll;
-    }
-  }
-</style>
+  </style>
 
 
     <section class="ftco-services ftco-no-pb">
