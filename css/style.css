@@ -4966,6 +4966,24 @@ a.close.disabled {
   padding: 0.5rem 0.75rem;
   color: #212529; }
 
+/* CSS updates */
+html, body {
+  scroll-behavior: smooth; /* Ensure smooth scrolling across devices */
+  overflow-x: hidden; /* Prevent horizontal scroll issues */
+}
+
+.carousel, .carousel-inner, .carousel-item {
+  touch-action: pan-y; /* Allow vertical scrolling without interruption */
+}
+
+/* Ensure proper rendering on mobile */
+@media (max-width: 600px) {
+  .carousel-control-prev, .carousel-control-next {
+    width: 10%; /* Smaller controls for mobile */
+  }
+}
+
+
 .carousel {
   position: relative; }
 
