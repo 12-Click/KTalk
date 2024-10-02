@@ -23,6 +23,60 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 	<script src="https://www.paypal.com/sdk/js?client-id=Ac9lTRJ76nhLqh_KMBeZrgJd3T-AWntAHLFj6PekQb2HuXZyqj2jUwpw23O_LSwSQ-ATgXFBWFCQbfsv"></script>
+  
+  <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+	  <style>
+        .slider-item {
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .slider-item h1 {
+                font-size: 2rem;  /* Adjust font size for smaller screens */
+            }
+
+            .owl-carousel .owl-nav button.owl-prev,
+            .owl-carousel .owl-nav button.owl-next {
+                padding: 5px;  /* Reduce button size for mobile */
+            }
+
+            .owl-carousel .owl-nav button.owl-prev {
+                left: 5px;  /* Adjust position */
+            }
+
+            .owl-carousel .owl-nav button.owl-next {
+                right: 5px;  /* Adjust position */
+            }
+        }
+
+        .owl-carousel .owl-nav button.owl-prev,
+        .owl-carousel .owl-nav button.owl-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            padding: 10px;
+        }
+
+        .owl-carousel .owl-nav button.owl-prev {
+            left: 10px;
+        }
+
+        .owl-carousel .owl-nav button.owl-next {
+            right: 10px;
+        }
+    </style>
+	  
   </head>
 <!-- Favicon-->
 <link rel="shortcut icon" href="images/My Logo.jpeg">
@@ -83,6 +137,41 @@
         </div>
       </div>
     </section>
+
+	   <!-- jQuery (required for Owl Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Owl Carousel Initialization -->
+    <script>
+    $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+            items: 1,  // Display one slide at a time
+            loop: true, // Infinite loop
+            autoplay: true, // Automatically move to the next slide
+            autoplayTimeout: 5000, // 5-second interval
+            autoplayHoverPause: true, // Pause on hover
+            nav: true, // Show next/prev buttons
+            dots: true, // Show dots for each slide
+            animateOut: 'fadeOut', // Fade animation for transition
+            touchDrag: true,  // Enable swipe on mobile devices
+            mouseDrag: true,  // Enable drag on desktop
+            responsive: {
+                0: {
+                    items: 1  // 1 item for mobile devices
+                },
+                600: {
+                    items: 1  // 1 item for tablets
+                },
+                1000: {
+                    items: 1  // 1 item for desktops/larger screens
+                }
+            }
+        });
+    });
+    </script>
 
 
     <section class="ftco-services ftco-no-pb">
