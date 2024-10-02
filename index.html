@@ -82,7 +82,33 @@
         </div>
         </div>
       </div>
-    </section> 
+    </section>
+
+	  <style>
+  .owl-carousel {
+    touch-action: pan-y; /* Allow vertical scrolling */
+  }
+</style>
+
+	  <script>
+  $(document).ready(function() {
+    $('.owl-carousel').owlCarousel({
+      items: 1,
+      loop: true,
+      margin: 0,
+      nav: true,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      smartSpeed: 800,
+      touchDrag: true,
+      mouseDrag: true,
+      pullDrag: true
+    });
+  });
+</script>
+
 
     <section class="ftco-services ftco-no-pb">
 			<div class="container-wrap">
